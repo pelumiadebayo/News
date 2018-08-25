@@ -1,14 +1,66 @@
+// import { combineReducers } from 'redux'
+// import {
+//   SELECT_CATEGORY,
+//   INVALIDATE_CATEGORY,
+//   REQUEST_POSTS,
+//   RECEIVE_POSTS
+// } from '../actions/index'
 
-const reducer = (state = {}, action) => {
+// function selectedcategory(state = 'technology', action) {
+//   switch (action.type) {
+//     case SELECT_CATEGORY:
+//       return action.category
+//     default:
+//       return state
+//   }
+// }
 
-    switch (action.type) {
-      case 'HELLO_REACT':
-        return { ...state, say : 'Hello World Redux'  };
-      default:
-        return state;
-    }
-    
-  };
-  
-  export default reducer;
-  
+// function posts(
+//   state = {
+//     isFetching: false,
+//     didInvalidate: false,
+//     items: []
+//   },
+//   action
+// ) {
+//   switch (action.type) {
+//     case INVALIDATE_CATEGORY:
+//       return Object.assign({}, state, {
+//         didInvalidate: true
+//       })
+//     case REQUEST_POSTS:
+//       return Object.assign({}, state, {
+//         isFetching: true,
+//         didInvalidate: false
+//       })
+//     case RECEIVE_POSTS:
+//       return Object.assign({}, state, {
+//         isFetching: false,
+//         didInvalidate: false,
+//         items: action.posts,
+//         lastUpdated: action.receivedAt
+//       })
+//     default:
+//       return state
+//   }
+// }
+
+// function postsBycategory(state = {}, action) {
+//   switch (action.type) {
+//     case INVALIDATE_CATEGORY:
+//     case RECEIVE_POSTS:
+//     case REQUEST_POSTS:
+//       return Object.assign({}, state, {
+//         [action.category]: posts(state[action.category], action)
+//       })
+//     default:
+//       return state
+//   }
+// }
+
+// const rootReducer = combineReducers({
+//   postsBycategory,
+//   selectedcategory
+// })
+
+// export default rootReducer

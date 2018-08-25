@@ -4,3 +4,12 @@
 body{
     background-color: beige;
 }
+.image{
+    max-width: 30rem;
+    max-height: 20rem;
+}
+.cardName{
+    width: 30rem;
+    margin-top: 40px;
+    padding: 10px;
+}
